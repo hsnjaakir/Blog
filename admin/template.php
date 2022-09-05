@@ -7,7 +7,7 @@
     //     header("location:index.php");
     // }
     // if (isset($_GET['adminlogout'])) {
-    //     if ($_GET['adminlogout'] == logout) {
+    //     if ($_GET['adminlogout'] == 'logout') {
     //         $obj->adminLogout();
     //     }
     // }

@@ -9,7 +9,7 @@
         <div class="col-lg-12">
           <div class="blog-post">
             <div class="blog-thumb">
-              <img style="height: 100px;" src="upload/<?php echo $postData['post_img']; ?>">
+              <img style="height: 500px;" src="upload/<?php echo $postData['post_img']; ?>">
             </div>
             <div class="down-content">
               <span><?php echo $postData['cat_name']; ?></span>
@@ -19,7 +19,7 @@
               <ul class="post-info">
                 <li><a href="#"><?php echo $postData['post_author']; ?></a></li>
                 <li><a href="#"><?php echo $postData['post_date']; ?></a></li>
-                <li><a href="#"><?php echo $postData['post_comment_count']; ?></a></li>
+                <!-- <li><a href="#"><?php echo $postData['post_comment_count']; ?></a></li> -->
               </ul>
               <p><?php echo $postData['post_summery']; ?></p>
               <div class="post-options">

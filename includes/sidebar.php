@@ -1,3 +1,7 @@
+<?php
+  $getCat = $obj->display_category();
+?>
+
 <div class="col-lg-4">
   <div class="sidebar">
     <div class="row">
@@ -7,7 +11,7 @@
 
       <?php include_once("category.php"); ?>
 
-      <div class="col-lg-12">
+      <!-- <div class="col-lg-12">
         <div class="sidebar-item tags">
           <div class="sidebar-heading">
             <h2>Tag Clouds</h2>
@@ -24,7 +28,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

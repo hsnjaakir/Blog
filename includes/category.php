@@ -7,16 +7,11 @@
             <ul>
                 <?php while ($category = mysqli_fetch_assoc($getCat)) { ?>
                     <li>
-                        <a href="index.php"> <?php echo $category['cat_name']; ?> </a>
+                        <a href="index.php">
+                            <?php echo $category['cat_name']; ?>
+                        </a>
                     </li>
                 <?php } ?>
-
-                <li><a href="#">- Nature Lifestyle</a></li>
-                <li><a href="#">- Awesome Layouts</a></li>
-                <li><a href="#">- Creative Ideas</a></li>
-                <li><a href="#">- Responsive Templates</a></li>
-                <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                <li><a href="#">- Creative &amp; Unique</a></li>
             </ul>
         </div>
     </div>

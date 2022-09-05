@@ -26,13 +26,14 @@
                 if ($admin_info) {
                     header("location:dashboard.php");
                     $admin_data = mysqli_fetch_assoc($admin_info);
+                    // problem arise here
                     // session_start();
                     // $_SESSION(['adminID']) = $admin_data['id'];
                     // $_SESSION(['admin_name']) = $admin_data['admin_name'];
                 }
             }
         }
-
+        // problem arise here
         // public function adminLogout() {
         //     unset($_SESSION(['adminID']));
         //     unset($_SESSION(['admin_name']));
@@ -151,12 +152,27 @@
                 return "Post updated successfully";
             }
         }
+
         public function delete_post($id){
             $query = "DELETE FROM posts WHERE post_id=$id";
             if (mysqli_query($this->conn, $query)){
                 return "Post deleted successfully";
             }
         }
+
+        public function search_posts($str){
+            $query = "SELECT * FROM posts WHERE post_title LIKE '%$str%'";
+            if (mysqli_query($this->conn, $query)) {
+                $searched_value = mysqli_query($this->conn, $query);
+                if(mysqli_num_rows($searched_value)>0){
+                    $post = mysqli_fetch_assoc($searched_value);
+                    return $post;
+                }else{
+                    return "No post found.";
+                }
+            }
+        }
+
     }
 
 

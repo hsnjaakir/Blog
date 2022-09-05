@@ -5,13 +5,13 @@
     if (isset($_POST['admin_login'])) {
         $obj->admin_login($_POST);
     }
-    // session_start();
-    // if(isset($_SESSION['id'])){
-    //     $id = $_SESSION['id'];
-    // }
-    // if(isset($id)) {
-    //     header("location:dashboard.php");
-    // }
+    session_start();
+    if(isset($_SESSION['id'])){
+        $id = $_SESSION['id'];
+    }
+    if(isset($id)) {
+        header("location:dashboard.php");
+    }
 ?>
 
 <?php include_once("includes/head.php") ?>
@@ -57,7 +57,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                        <div class="text-muted">Copyright &copy; Jakir Hosen 2022</div>
                         <div>
                             <a href="#">Privacy Policy</a>
                             &middot;
