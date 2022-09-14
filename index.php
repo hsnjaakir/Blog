@@ -17,7 +17,7 @@
 
     <?php include_once("includes/banner.php"); ?>
 
-    <!-- <?php include_once("includes/cta.php"); ?> -->
+    <?php include_once("includes/cta.php"); ?>
 
 
 

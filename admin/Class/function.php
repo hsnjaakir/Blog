@@ -26,14 +26,12 @@
                 if ($admin_info) {
                     header("location:dashboard.php");
                     $admin_data = mysqli_fetch_assoc($admin_info);
-                    // problem arise here
                     // session_start();
                     // $_SESSION(['adminID']) = $admin_data['id'];
                     // $_SESSION(['admin_name']) = $admin_data['admin_name'];
                 }
             }
         }
-        // problem arise here
         // public function adminLogout() {
         //     unset($_SESSION(['adminID']));
         //     unset($_SESSION(['admin_name']));
@@ -161,15 +159,24 @@
         }
 
         public function search_posts($str){
-            $query = "SELECT * FROM posts WHERE post_title LIKE '%$str%'";
+            $query = "SELECT * FROM posts WHERE post_title LIKE '%$str%' OR post_tag LIKE '%$str%'";
             if (mysqli_query($this->conn, $query)) {
                 $searched_value = mysqli_query($this->conn, $query);
                 if(mysqli_num_rows($searched_value)>0){
                     $post = mysqli_fetch_assoc($searched_value);
                     return $post;
                 }else{
-                    return "No post found.";
+                    return 0;
                 }
+            }
+        }
+
+        public function get_category_info($cat_name)
+        {
+            $query = "SELECT * FROM post_with_ctg WHERE cat_name='$cat_name'";
+            if (mysqli_query($this->conn, $query)) {
+                $category_info = mysqli_query($this->conn, $query);
+                return $category_info;
             }
         }
 

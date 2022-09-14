@@ -1,5 +1,5 @@
 <?php
-  $posts = $obj->display_post_UI();
+$posts = $obj->display_post_UI();
 ?>
 
 <div class="col-lg-8">
@@ -13,9 +13,7 @@
             </div>
             <div class="down-content">
               <span><?php echo $postData['cat_name']; ?></span>
-              <a href="single_post.php?view=postview&&id=<?php echo $postData['post_id'];?>">
-                <h4><?php echo $postData['post_title']; ?></h4>
-              </a>
+              <h4><?php echo $postData['post_title']; ?><span style="font-size: 10px;"><a href="single_post.php?view=postview&&id=<?php echo $postData['post_id']; ?>">  Details</a></span></h4>
               <ul class="post-info">
                 <li><a href="#"><?php echo $postData['post_author']; ?></a></li>
                 <li><a href="#"><?php echo $postData['post_date']; ?></a></li>

@@ -12,13 +12,13 @@
         <ul class="navbar-nav ml-auto">
           <?php while ($category = mysqli_fetch_assoc($getCat)) { ?>
             <li class="nav-item">
-              <a class="nav-link" href="index.php">
+              <a class="nav-link" href="category_post.php?view=postview&&cat_name=<?php echo $category['cat_name']; ?>">
                 <?php echo $category['cat_name']; ?>
               </a>
             </li>
           <?php } ?>
           <li class="nav-item">
-            <a class="nav-link" href="contact.php"><span style="color: green" >Contact Us</span></a>
+            <a class="nav-link" href="#footer-section"><span style="color: green">Contact Us</span></a>
           </li>
         </ul>
       </div>

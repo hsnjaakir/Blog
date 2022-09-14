@@ -7,7 +7,7 @@
             <ul>
                 <?php while ($category = mysqli_fetch_assoc($getCat)) { ?>
                     <li>
-                        <a href="index.php">
+                        <a href="category_post.php?view=postview&&cat_name=<?php echo $category['cat_name']; ?>">
                             <?php echo $category['cat_name']; ?>
                         </a>
                     </li>

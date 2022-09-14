@@ -1,12 +1,12 @@
 <?php
-    $categoryName = $obj->display_category();
-    if (isset($_POST['add_post'])) {
-        $msg = $obj->add_post($_POST);
-    }
+$categoryName = $obj->display_category();
+if (isset($_POST['add_post'])) {
+    $msg = $obj->add_post($_POST);
+}
 ?>
 
 <h2>Add post</h2>
-<?php if (isset($msg)){echo $msg;}?>
+<p style="color:green;font-size:25px"><?php if (isset($msg)) {echo $msg;} ?></p>
 <form action="" method="POST" enctype="multipart/form-data">
     <div class="form-group">
         <label class="mb-1" for="post_title">Post Title</label>
@@ -38,11 +38,11 @@
     </div>
     <div class="form-group">
         <label class="mb-1" for="post_status">Post Status</label>
-            <select class="form-control" name="post_status" id="post_status">
-                <option value="1">Published</option>
-                <option value="0">Unpublished</option>
-            </select>
+        <select class="form-control" name="post_status" id="post_status">
+            <option value="1">Published</option>
+            <option value="0">Unpublished</option>
+        </select>
     </div>
-    
+
     <input type="submit" class="from-control btn btn-block btn-primary" name="add_post" value="Add Post">
 </form>

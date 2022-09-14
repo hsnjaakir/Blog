@@ -5,13 +5,13 @@
     if (isset($_POST['admin_login'])) {
         $obj->admin_login($_POST);
     }
-    session_start();
-    if(isset($_SESSION['id'])){
-        $id = $_SESSION['id'];
-    }
-    if(isset($id)) {
-        header("location:dashboard.php");
-    }
+    // session_start();
+    // if(isset($_SESSION['adminID'])){
+    //     $id = $_SESSION['adminID'];
+    // }
+    // if($id) {
+    //     header("location:dashboard.php");
+    // }
 ?>
 
 <?php include_once("includes/head.php") ?>
